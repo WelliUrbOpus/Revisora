@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Symbolconfiguration xmlns="http://www.3s-software.com/schemas/Symbolconfiguration.xsd">
+  <Header>
+    <Version>3.5.3.50</Version>
+    <SymbolConfigObject version="3.5.3.50" />
+    <ProjectInfo name="Revisora_V13" devicename="MyController" appname="Application" />
+  </Header>
+  <TypeList>
+    <TypeSimple name="T_SINT" size="1" swapsize="1" typeclass="SInt" iecname="SINT" />
+    <TypeSimple name="T_INT" size="2" swapsize="2" typeclass="Int" iecname="INT" />
+    <TypeSimple name="T_BOOL" size="1" swapsize="0" typeclass="Bool" iecname="BOOL" />
+    <TypeArray name="T_ARRAY__0__4__OF_BOOL" size="5" nativesize="5" typeclass="Array" iecname="ARRAY [0..4] OF BOOL" basetype="T_BOOL">
+      <ArrayDim minrange="0" maxrange="4" />
+    </TypeArray>
+    <TypeSimple name="T_DINT" size="4" swapsize="4" typeclass="DInt" iecname="DINT" />
+    <TypeArray name="T_ARRAY__0__4__OF_DINT" size="20" nativesize="20" typeclass="Array" iecname="ARRAY [0..4] OF DINT" basetype="T_DINT">
+      <ArrayDim minrange="0" maxrange="4" />
+    </TypeArray>
+    <TypeUserDef name="T__receita" size="16" nativesize="16" typeclass="Userdef" iecname="_receita">
+      <UserDefElement type="T_DINT" iecname="velocDesb" byteoffset="0" />
+      <UserDefElement type="T_DINT" iecname="velocReb" byteoffset="4" />
+      <UserDefElement type="T_INT" iecname="freioDesb" byteoffset="8" />
+      <UserDefElement type="T_INT" iecname="freioReb" byteoffset="10" />
+      <UserDefElement type="T_INT" iecname="torqueDesb" byteoffset="12" />
+      <UserDefElement type="T_INT" iecname="torqueReb" byteoffset="14" />
+    </TypeUserDef>
+    <TypeArray name="T_ARRAY__0__5__OF__receita" size="96" nativesize="96" typeclass="Array" iecname="ARRAY [0..5] OF _receita" basetype="T__receita">
+      <ArrayDim minrange="0" maxrange="5" />
+    </TypeArray>
+    <TypeSimple name="T_TIME" size="4" swapsize="4" typeclass="Time" iecname="TIME" />
+    <TypeUserDef name="T_TON" size="28" nativesize="28" typeclass="Userdef" iecname="TON">
+      <UserDefElement type="T_BOOL" iecname="IN" byteoffset="4" />
+      <UserDefElement type="T_TIME" iecname="PT" byteoffset="8" />
+      <UserDefElement type="T_BOOL" iecname="Q" byteoffset="12" />
+      <UserDefElement type="T_TIME" iecname="ET" byteoffset="16" />
+    </TypeUserDef>
+    <TypeUserDef name="T__exec_bits" size="12" nativesize="12" typeclass="Userdef" iecname="_exec_bits">
+      <UserDefElement type="T_BOOL" iecname="RQ" byteoffset="0" />
+      <UserDefElement type="T_BOOL" iecname="IP" byteoffset="1" />
+      <UserDefElement type="T_BOOL" iecname="DN" byteoffset="2" />
+      <UserDefElement type="T_DINT" iecname="Fase" byteoffset="4" />
+      <UserDefElement type="T_DINT" iecname="Mask" byteoffset="8" />
+    </TypeUserDef>
+    <TypeSimple name="T_UINT" size="2" swapsize="2" typeclass="UInt" iecname="UINT" />
+    <TypeArray name="T_ARRAY__0__50__OF_BOOL" size="51" nativesize="51" typeclass="Array" iecname="ARRAY [0..50] OF BOOL" basetype="T_BOOL">
+      <ArrayDim minrange="0" maxrange="50" />
+    </TypeArray>
+    <TypeSimple name="T_WSTRING" size="162" swapsize="2" typeclass="WString" iecname="WSTRING" />
+  </TypeList>
+  <NodeList>
+    <Node name="Application">
+      <Node name="GVL">
+        <Node name="AjustaHora" type="T_BOOL" access="ReadWrite" />
+        <Node name="alarme" type="T_ARRAY__0__50__OF_BOOL" access="ReadWrite" />
+        <Node name="alarmeReset" type="T_BOOL" access="ReadWrite" />
+        <Node name="alarmeResetInd" type="T_BOOL" access="ReadWrite" />
+        <Node name="alarmes" type="T__exec_bits" access="ReadWrite" />
+        <Node name="alwaysOff" type="T_BOOL" access="ReadWrite" />
+        <Node name="alwaysOn" type="T_BOOL" access="ReadWrite" />
+        <Node name="AnoAtual" type="T_UINT" access="ReadWrite" />
+        <Node name="AnoSet" type="T_UINT" access="ReadWrite" />
+        <Node name="calcGeral" type="T_BOOL" access="ReadWrite" />
+        <Node name="calcTempos" type="T_BOOL" access="ReadWrite" />
+        <Node name="ciclo" type="T__exec_bits" access="ReadWrite" />
+        <Node name="ClkScan" type="T_BOOL" access="ReadWrite" />
+        <Node name="comando" type="T__exec_bits" access="ReadWrite" />
+        <Node name="comandoOff" type="T_BOOL" access="ReadWrite" />
+        <Node name="desliga" type="T__exec_bits" access="ReadWrite" />
+        <Node name="DiaAtual" type="T_UINT" access="ReadWrite" />
+        <Node name="DiaSet" type="T_UINT" access="ReadWrite" />
+        <Node name="emergOk" type="T_BOOL" access="ReadWrite" />
+        <Node name="existeAlarme" type="T_BOOL" access="ReadWrite" />
+        <Node name="firstScan" type="T_BOOL" access="ReadWrite" />
+        <Node name="HoraAtual" type="T_UINT" access="ReadWrite" />
+        <Node name="HoraSet" type="T_UINT" access="ReadWrite" />
+        <Node name="injecaoTpoOff" type="T_BOOL" access="ReadWrite" />
+        <Node name="jogNeg" type="T__exec_bits" access="ReadWrite" />
+        <Node name="jogPos" type="T__exec_bits" access="ReadWrite" />
+        <Node name="ladoDir" type="T_BOOL" access="ReadWrite" />
+        <Node name="ladoEsq" type="T_BOOL" access="ReadWrite" />
+        <Node name="liberaCiclo" type="T_BOOL" access="ReadWrite" />
+        <Node name="livreComando" type="T_BOOL" access="ReadWrite" />
+        <Node name="livreStart" type="T_BOOL" access="ReadWrite" />
+        <Node name="mensagem" type="T_ARRAY__0__50__OF_BOOL" access="ReadWrite" />
+        <Node name="MesAtual" type="T_UINT" access="ReadWrite" />
+        <Node name="MesSet" type="T_UINT" access="ReadWrite" />
+        <Node name="MinutoAtual" type="T_UINT" access="ReadWrite" />
+        <Node name="MinutoSet" type="T_UINT" access="ReadWrite" />
+        <Node name="modoAutomatico" type="T_BOOL" access="ReadWrite" />
+        <Node name="nipMove" type="T__exec_bits" access="ReadWrite" />
+        <Node name="numAlarme" type="T_SINT" access="ReadWrite" />
+        <Node name="pisca" type="T_BOOL" access="ReadWrite" />
+        <Node name="piscaRapido" type="T_BOOL" access="ReadWrite" />
+        <Node name="primeiroCiclo" type="T_BOOL" access="ReadWrite" />
+        <Node name="principal" type="T__exec_bits" access="ReadWrite" />
+        <Node name="psBtCiclo" type="T_BOOL" access="ReadWrite" />
+        <Node name="SegundoAtual" type="T_UINT" access="ReadWrite" />
+        <Node name="SegundoSet" type="T_UINT" access="ReadWrite" />
+        <Node name="sentidoDesbobinar" type="T_BOOL" access="ReadWrite" />
+        <Node name="sentidoRebobinar" type="T_BOOL" access="ReadWrite" />
+        <Node name="sink" type="T_BOOL" access="ReadWrite" />
+        <Node name="TL_inicializa" type="T_TON" access="ReadWrite" />
+        <Node name="tpoInicio" type="T_TIME" access="ReadWrite" />
+        <Node name="triggerBobina" type="T_BOOL" access="ReadWrite" />
+      </Node>
+      <Node name="IHM">
+        <Node name="ihm_alarme" type="T_ARRAY__0__50__OF_BOOL" access="ReadWrite" />
+        <Node name="ihm_alarmeReset" type="T_BOOL" access="ReadWrite" />
+        <Node name="ihm_alarmeResetInd" type="T_BOOL" access="ReadWrite" />
+        <Node name="ihm_alinhador" type="T_BOOL" access="ReadWrite" />
+        <Node name="ihm_bannerConfirma" type="T_BOOL" access="ReadWrite" />
+        <Node name="ihm_bannerMensagem" type="T_BOOL" access="ReadWrite" />
+        <Node name="ihm_cilindroNip" type="T_BOOL" access="ReadWrite" />
+        <Node name="ihm_confirmaV" type="T_BOOL" access="ReadWrite" />
+        <Node name="ihm_confirmaX" type="T_BOOL" access="ReadWrite" />
+        <Node name="ihm_inverte" type="T_BOOL" access="ReadWrite" />
+        <Node name="ihm_mensagem" type="T_DINT" access="ReadWrite" />
+        <Node name="ihm_numReceita" type="T_SINT" access="ReadWrite" />
+        <Node name="ihm_telaAtual" type="T_INT" access="ReadWrite" />
+        <Node name="ihm_telaHome" type="T_BOOL" access="ReadWrite" />
+        <Node name="ihm_textoConfirma" type="T_DINT" access="ReadWrite" />
+        <Node name="ihm_textoProced" type="T_DINT" access="ReadWrite" />
+        <Node name="ihm_velocMedida" type="T_DINT" access="ReadWrite" />
+        <Node name="nome" type="T_WSTRING" access="ReadWrite" />
+      </Node>
+      <Node name="PERSISTENTVARS">
+        <Node name="auxVeloc" type="T_ARRAY__0__4__OF_BOOL" access="ReadWrite" />
+        <Node name="bobina" type="T_ARRAY__0__5__OF__receita" access="ReadWrite" />
+        <Node name="bobinaAtual" type="T__receita" access="ReadWrite" />
+        <Node name="displayState" type="T_INT" access="ReadWrite" />
+        <Node name="ihm_tempoInicio" type="T_DINT" access="ReadWrite" />
+        <Node name="ihm_velocidade" type="T_DINT" access="ReadWrite" />
+        <Node name="M_revisoraAcel" type="T_DINT" access="ReadWrite" />
+        <Node name="M_revisoraDecel" type="T_DINT" access="ReadWrite" />
+        <Node name="M_revisoraVeloc" type="T_DINT" access="ReadWrite" />
+        <Node name="numRec" type="T_SINT" access="ReadWrite" />
+        <Node name="veloc" type="T_ARRAY__0__4__OF_DINT" access="ReadWrite" />
+        <Node name="visLadoDir" type="T_BOOL" access="ReadWrite" />
+        <Node name="visLadoEsq" type="T_BOOL" access="ReadWrite" />
+      </Node>
+    </Node>
+  </NodeList>
+</Symbolconfiguration>
