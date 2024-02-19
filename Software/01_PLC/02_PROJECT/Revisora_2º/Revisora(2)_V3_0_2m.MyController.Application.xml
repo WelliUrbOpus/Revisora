@@ -1,0 +1,432 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Symbolconfiguration xmlns="http://www.3s-software.com/schemas/Symbolconfiguration.xsd">
+  <Header>
+    <Version>3.5.3.50</Version>
+    <SymbolConfigObject version="3.5.3.50" />
+    <ProjectInfo name="Revisora(2)_V3_0_2m" devicename="MyController" appname="Application" />
+  </Header>
+  <TypeList>
+    <TypeSimple name="T_REAL" size="4" swapsize="4" typeclass="Real" iecname="REAL" />
+    <TypeSimple name="T_BOOL" size="1" swapsize="0" typeclass="Bool" iecname="BOOL" />
+    <TypeSimple name="T_SINT" size="1" swapsize="1" typeclass="SInt" iecname="SINT" />
+    <TypeSimple name="T_INT" size="2" swapsize="2" typeclass="Int" iecname="INT" />
+    <TypeSimple name="T_DINT" size="4" swapsize="4" typeclass="DInt" iecname="DINT" />
+    <TypeArray name="T_ARRAY__0__4__OF_BOOL" size="5" nativesize="5" typeclass="Array" iecname="ARRAY [0..4] OF BOOL" basetype="T_BOOL">
+      <ArrayDim minrange="0" maxrange="4" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__1__OF_BOOL" size="2" nativesize="2" typeclass="Array" iecname="ARRAY [0..1] OF BOOL" basetype="T_BOOL">
+      <ArrayDim minrange="0" maxrange="1" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__1__OF_INT" size="4" nativesize="4" typeclass="Array" iecname="ARRAY [0..1] OF INT" basetype="T_INT">
+      <ArrayDim minrange="0" maxrange="1" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__4__OF_DINT" size="20" nativesize="20" typeclass="Array" iecname="ARRAY [0..4] OF DINT" basetype="T_DINT">
+      <ArrayDim minrange="0" maxrange="4" />
+    </TypeArray>
+    <TypeSimple name="T_TIME" size="4" swapsize="4" typeclass="Time" iecname="TIME" />
+    <TypeArray name="T_ARRAY__0__1__OF_TIME" size="8" nativesize="8" typeclass="Array" iecname="ARRAY [0..1] OF TIME" basetype="T_TIME">
+      <ArrayDim minrange="0" maxrange="1" />
+    </TypeArray>
+    <TypeUserDef name="T__receita" size="16" nativesize="16" typeclass="Userdef" iecname="_receita">
+      <UserDefElement type="T_DINT" iecname="velocDesb" byteoffset="0" />
+      <UserDefElement type="T_DINT" iecname="velocReb" byteoffset="4" />
+      <UserDefElement type="T_INT" iecname="freioDesb" byteoffset="8" />
+      <UserDefElement type="T_INT" iecname="freioReb" byteoffset="10" />
+      <UserDefElement type="T_INT" iecname="torqueDesb" byteoffset="12" />
+      <UserDefElement type="T_INT" iecname="torqueReb" byteoffset="14" />
+    </TypeUserDef>
+    <TypeArray name="T_ARRAY__0__5__OF__receita" size="96" nativesize="96" typeclass="Array" iecname="ARRAY [0..5] OF _receita" basetype="T__receita">
+      <ArrayDim minrange="0" maxrange="5" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__2__OF_REAL" size="12" nativesize="12" typeclass="Array" iecname="ARRAY [0..2] OF REAL" basetype="T_REAL">
+      <ArrayDim minrange="0" maxrange="2" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__1__2__OF_REAL" size="8" nativesize="8" typeclass="Array" iecname="ARRAY [1..2] OF REAL" basetype="T_REAL">
+      <ArrayDim minrange="1" maxrange="2" />
+    </TypeArray>
+    <TypeSimple name="T_POINTER_TO_DINT" size="4" swapsize="4" typeclass="Pointer" iecname="POINTER TO DINT" />
+    <TypeSimple name="T_PTO_REF" size="4" swapsize="4" typeclass="Enum" iecname="PTO_REF" />
+    <TypeUserDef name="T_AXIS_REF_PTO" size="12" nativesize="12" typeclass="Userdef" iecname="AXIS_REF_PTO">
+      <UserDefElement type="T_POINTER_TO_DINT" iecname="AxisRef" byteoffset="4" />
+      <UserDefElement type="T_PTO_REF" iecname="PtoChannel" byteoffset="8" />
+    </TypeUserDef>
+    <TypeSimple name="T_MC_DIRECTION" size="2" swapsize="2" typeclass="Enum" iecname="MC_DIRECTION" />
+    <TypeSimple name="T_MC_BUFFER_MODE" size="2" swapsize="2" typeclass="Enum" iecname="MC_BUFFER_MODE" />
+    <TypeSimple name="T_PTO_ERROR" size="2" swapsize="2" typeclass="Enum" iecname="PTO_ERROR" />
+    <TypeUserDef name="T_MC_MoveVelocity_PTO" size="92" nativesize="92" typeclass="Userdef" iecname="MC_MoveVelocity_PTO">
+      <UserDefElement type="T_AXIS_REF_PTO" iecname="Axis" byteoffset="4" />
+      <UserDefElement type="T_BOOL" iecname="Execute" byteoffset="16" />
+      <UserDefElement type="T_BOOL" iecname="ContinuousUpdate" byteoffset="17" />
+      <UserDefElement type="T_DINT" iecname="Velocity" byteoffset="18" />
+      <UserDefElement type="T_DINT" iecname="Acceleration" byteoffset="22" />
+      <UserDefElement type="T_DINT" iecname="Deceleration" byteoffset="26" />
+      <UserDefElement type="T_MC_DIRECTION" iecname="Direction" byteoffset="30" />
+      <UserDefElement type="T_MC_BUFFER_MODE" iecname="BufferMode" byteoffset="32" />
+      <UserDefElement type="T_BOOL" iecname="InVelocity" byteoffset="34" />
+      <UserDefElement type="T_BOOL" iecname="Busy" byteoffset="35" />
+      <UserDefElement type="T_BOOL" iecname="Active" byteoffset="36" />
+      <UserDefElement type="T_BOOL" iecname="CommandAborted" byteoffset="37" />
+      <UserDefElement type="T_BOOL" iecname="Error" byteoffset="38" />
+      <UserDefElement type="T_PTO_ERROR" iecname="ErrorId" byteoffset="39" />
+      <UserDefElement type="T_INT" iecname="JerkRatio" byteoffset="72" />
+    </TypeUserDef>
+    <TypeArray name="T_ARRAY__1__3__OF_MC_MoveVelocity_PTO" size="252" nativesize="252" typeclass="Array" iecname="ARRAY [1..3] OF MC_MoveVelocity_PTO" basetype="T_MC_MoveVelocity_PTO">
+      <ArrayDim minrange="1" maxrange="3" />
+    </TypeArray>
+    <TypeUserDef name="T_MC_MoveAbsolute_PTO" size="68" nativesize="68" typeclass="Userdef" iecname="MC_MoveAbsolute_PTO">
+      <UserDefElement type="T_AXIS_REF_PTO" iecname="Axis" byteoffset="4" />
+      <UserDefElement type="T_BOOL" iecname="Execute" byteoffset="16" />
+      <UserDefElement type="T_DINT" iecname="Position" byteoffset="17" />
+      <UserDefElement type="T_DINT" iecname="Velocity" byteoffset="21" />
+      <UserDefElement type="T_DINT" iecname="Acceleration" byteoffset="25" />
+      <UserDefElement type="T_DINT" iecname="Deceleration" byteoffset="29" />
+      <UserDefElement type="T_MC_BUFFER_MODE" iecname="BufferMode" byteoffset="33" />
+      <UserDefElement type="T_BOOL" iecname="Done" byteoffset="35" />
+      <UserDefElement type="T_BOOL" iecname="Busy" byteoffset="36" />
+      <UserDefElement type="T_BOOL" iecname="Active" byteoffset="37" />
+      <UserDefElement type="T_BOOL" iecname="CommandAborted" byteoffset="38" />
+      <UserDefElement type="T_BOOL" iecname="Error" byteoffset="39" />
+      <UserDefElement type="T_PTO_ERROR" iecname="ErrorId" byteoffset="40" />
+      <UserDefElement type="T_INT" iecname="JerkRatio" byteoffset="56" />
+    </TypeUserDef>
+    <TypeUserDef name="T_MC_MoveRelative_PTO" size="68" nativesize="68" typeclass="Userdef" iecname="MC_MoveRelative_PTO">
+      <UserDefElement type="T_AXIS_REF_PTO" iecname="Axis" byteoffset="4" />
+      <UserDefElement type="T_BOOL" iecname="Execute" byteoffset="16" />
+      <UserDefElement type="T_DINT" iecname="Distance" byteoffset="17" />
+      <UserDefElement type="T_DINT" iecname="Velocity" byteoffset="21" />
+      <UserDefElement type="T_DINT" iecname="Acceleration" byteoffset="25" />
+      <UserDefElement type="T_DINT" iecname="Deceleration" byteoffset="29" />
+      <UserDefElement type="T_MC_BUFFER_MODE" iecname="BufferMode" byteoffset="33" />
+      <UserDefElement type="T_BOOL" iecname="Done" byteoffset="35" />
+      <UserDefElement type="T_BOOL" iecname="Busy" byteoffset="36" />
+      <UserDefElement type="T_BOOL" iecname="Active" byteoffset="37" />
+      <UserDefElement type="T_BOOL" iecname="CommandAborted" byteoffset="38" />
+      <UserDefElement type="T_BOOL" iecname="Error" byteoffset="39" />
+      <UserDefElement type="T_PTO_ERROR" iecname="ErrorId" byteoffset="40" />
+      <UserDefElement type="T_INT" iecname="JerkRatio" byteoffset="56" />
+    </TypeUserDef>
+    <TypeArray name="T_ARRAY__0__3__OF_MC_MoveRelative_PTO" size="272" nativesize="272" typeclass="Array" iecname="ARRAY [0..3] OF MC_MoveRelative_PTO" basetype="T_MC_MoveRelative_PTO">
+      <ArrayDim minrange="0" maxrange="3" />
+    </TypeArray>
+    <TypeUserDef name="T_MC_Stop_PTO" size="44" nativesize="44" typeclass="Userdef" iecname="MC_Stop_PTO">
+      <UserDefElement type="T_AXIS_REF_PTO" iecname="Axis" byteoffset="4" />
+      <UserDefElement type="T_BOOL" iecname="Execute" byteoffset="16" />
+      <UserDefElement type="T_DINT" iecname="Deceleration" byteoffset="17" />
+      <UserDefElement type="T_BOOL" iecname="Done" byteoffset="21" />
+      <UserDefElement type="T_BOOL" iecname="Busy" byteoffset="22" />
+      <UserDefElement type="T_BOOL" iecname="CommandAborted" byteoffset="23" />
+      <UserDefElement type="T_BOOL" iecname="Error" byteoffset="24" />
+      <UserDefElement type="T_PTO_ERROR" iecname="ErrorId" byteoffset="25" />
+      <UserDefElement type="T_INT" iecname="JerkRatio" byteoffset="32" />
+    </TypeUserDef>
+    <TypeUserDef name="T_MC_SetPosition_PTO" size="28" nativesize="28" typeclass="Userdef" iecname="MC_SetPosition_PTO">
+      <UserDefElement type="T_AXIS_REF_PTO" iecname="Axis" byteoffset="4" />
+      <UserDefElement type="T_BOOL" iecname="Execute" byteoffset="16" />
+      <UserDefElement type="T_DINT" iecname="Position" byteoffset="17" />
+      <UserDefElement type="T_BOOL" iecname="Done" byteoffset="21" />
+      <UserDefElement type="T_BOOL" iecname="Error" byteoffset="22" />
+      <UserDefElement type="T_PTO_ERROR" iecname="ErrorId" byteoffset="23" />
+    </TypeUserDef>
+    <TypeUserDef name="T__eixo_auto" size="664" nativesize="664" typeclass="Userdef" iecname="_eixo_auto">
+      <UserDefElement type="T_ARRAY__1__3__OF_MC_MoveVelocity_PTO" iecname="movVeloc" byteoffset="0" />
+      <UserDefElement type="T_MC_MoveAbsolute_PTO" iecname="movAbs" byteoffset="252" />
+      <UserDefElement type="T_ARRAY__0__3__OF_MC_MoveRelative_PTO" iecname="movRelat" byteoffset="320" />
+      <UserDefElement type="T_MC_Stop_PTO" iecname="movStop" byteoffset="592" />
+      <UserDefElement type="T_MC_SetPosition_PTO" iecname="setPos" byteoffset="636" />
+    </TypeUserDef>
+    <TypeArray name="T_ARRAY__1__2__OF_MC_Stop_PTO" size="88" nativesize="88" typeclass="Array" iecname="ARRAY [1..2] OF MC_Stop_PTO" basetype="T_MC_Stop_PTO">
+      <ArrayDim minrange="1" maxrange="2" />
+    </TypeArray>
+    <TypeUserDef name="T__eixo_home" size="280" nativesize="280" typeclass="Userdef" iecname="_eixo_home">
+      <UserDefElement type="T_BOOL" iecname="RQ" byteoffset="0" />
+      <UserDefElement type="T_BOOL" iecname="IP" byteoffset="1" />
+      <UserDefElement type="T_BOOL" iecname="DN" byteoffset="2" />
+      <UserDefElement type="T_DINT" iecname="Fase" byteoffset="4" />
+      <UserDefElement type="T_DINT" iecname="Mask" byteoffset="8" />
+      <UserDefElement type="T_MC_MoveVelocity_PTO" iecname="movVeloc" byteoffset="12" />
+      <UserDefElement type="T_MC_MoveRelative_PTO" iecname="movRelat" byteoffset="96" />
+      <UserDefElement type="T_ARRAY__1__2__OF_MC_Stop_PTO" iecname="movStop" byteoffset="164" />
+      <UserDefElement type="T_MC_SetPosition_PTO" iecname="setPos" byteoffset="252" />
+    </TypeUserDef>
+    <TypeUserDef name="T_MC_ReadAxisError_PTO" size="16" nativesize="16" typeclass="Userdef" iecname="MC_ReadAxisError_PTO">
+      <UserDefElement type="T_AXIS_REF_PTO" iecname="Axis" byteoffset="4" />
+      <UserDefElement type="T_BOOL" iecname="Enable" byteoffset="16" />
+      <UserDefElement type="T_BOOL" iecname="Valid" byteoffset="17" />
+      <UserDefElement type="T_BOOL" iecname="Error" byteoffset="18" />
+      <UserDefElement type="T_PTO_ERROR" iecname="ErrorId" byteoffset="19" />
+      <UserDefElement type="T_PTO_ERROR" iecname="AxisErrorId" byteoffset="21" />
+    </TypeUserDef>
+    <TypeUserDef name="T_MC_ReadActualPosition_PTO" size="20" nativesize="20" typeclass="Userdef" iecname="MC_ReadActualPosition_PTO">
+      <UserDefElement type="T_AXIS_REF_PTO" iecname="Axis" byteoffset="4" />
+      <UserDefElement type="T_BOOL" iecname="Enable" byteoffset="16" />
+      <UserDefElement type="T_BOOL" iecname="Valid" byteoffset="17" />
+      <UserDefElement type="T_BOOL" iecname="Error" byteoffset="18" />
+      <UserDefElement type="T_PTO_ERROR" iecname="ErrorId" byteoffset="19" />
+      <UserDefElement type="T_DINT" iecname="Position" byteoffset="21" />
+    </TypeUserDef>
+    <TypeUserDef name="T_MC_Power_PTO" size="24" nativesize="24" typeclass="Userdef" iecname="MC_Power_PTO">
+      <UserDefElement type="T_AXIS_REF_PTO" iecname="Axis" byteoffset="4" />
+      <UserDefElement type="T_BOOL" iecname="Enable" byteoffset="16" />
+      <UserDefElement type="T_BOOL" iecname="DriveReady" byteoffset="17" />
+      <UserDefElement type="T_BOOL" iecname="LimP" byteoffset="18" />
+      <UserDefElement type="T_BOOL" iecname="LimN" byteoffset="19" />
+      <UserDefElement type="T_BOOL" iecname="Status" byteoffset="20" />
+      <UserDefElement type="T_BOOL" iecname="DriveEnable" byteoffset="21" />
+      <UserDefElement type="T_BOOL" iecname="Error" byteoffset="22" />
+      <UserDefElement type="T_PTO_ERROR" iecname="ErrorId" byteoffset="23" />
+    </TypeUserDef>
+    <TypeUserDef name="T_MC_Reset_PTO" size="16" nativesize="16" typeclass="Userdef" iecname="MC_Reset_PTO">
+      <UserDefElement type="T_AXIS_REF_PTO" iecname="Axis" byteoffset="4" />
+      <UserDefElement type="T_BOOL" iecname="Execute" byteoffset="16" />
+      <UserDefElement type="T_BOOL" iecname="Done" byteoffset="17" />
+      <UserDefElement type="T_BOOL" iecname="Error" byteoffset="18" />
+      <UserDefElement type="T_PTO_ERROR" iecname="ErrorId" byteoffset="19" />
+    </TypeUserDef>
+    <TypeUserDef name="T_MC_ReadMotionState_PTO" size="20" nativesize="20" typeclass="Userdef" iecname="MC_ReadMotionState_PTO">
+      <UserDefElement type="T_AXIS_REF_PTO" iecname="Axis" byteoffset="4" />
+      <UserDefElement type="T_BOOL" iecname="Enable" byteoffset="16" />
+      <UserDefElement type="T_BOOL" iecname="Valid" byteoffset="17" />
+      <UserDefElement type="T_BOOL" iecname="Error" byteoffset="18" />
+      <UserDefElement type="T_PTO_ERROR" iecname="ErrorId" byteoffset="19" />
+      <UserDefElement type="T_BOOL" iecname="ConstantVelocity" byteoffset="21" />
+      <UserDefElement type="T_BOOL" iecname="Accelerating" byteoffset="22" />
+      <UserDefElement type="T_BOOL" iecname="Decelerating" byteoffset="23" />
+    </TypeUserDef>
+    <TypeUserDef name="T_MC_ReadStatus_PTO" size="24" nativesize="24" typeclass="Userdef" iecname="MC_ReadStatus_PTO">
+      <UserDefElement type="T_AXIS_REF_PTO" iecname="Axis" byteoffset="4" />
+      <UserDefElement type="T_BOOL" iecname="Enable" byteoffset="16" />
+      <UserDefElement type="T_BOOL" iecname="Valid" byteoffset="17" />
+      <UserDefElement type="T_BOOL" iecname="Error" byteoffset="18" />
+      <UserDefElement type="T_PTO_ERROR" iecname="ErrorId" byteoffset="19" />
+      <UserDefElement type="T_BOOL" iecname="ErrorStop" byteoffset="21" />
+      <UserDefElement type="T_BOOL" iecname="Disabled" byteoffset="22" />
+      <UserDefElement type="T_BOOL" iecname="Stopping" byteoffset="23" />
+      <UserDefElement type="T_BOOL" iecname="Homing" byteoffset="24" />
+      <UserDefElement type="T_BOOL" iecname="Standstill" byteoffset="25" />
+      <UserDefElement type="T_BOOL" iecname="DiscreteMotion" byteoffset="26" />
+      <UserDefElement type="T_BOOL" iecname="ContinuousMotion" byteoffset="27" />
+      <UserDefElement type="T_BOOL" iecname="isHomed" byteoffset="28" />
+      <UserDefElement type="T_BOOL" iecname="AxisWarning" byteoffset="29" />
+      <UserDefElement type="T_BOOL" iecname="QueueFull" byteoffset="30" />
+    </TypeUserDef>
+    <TypeUserDef name="T__eixo_drive" size="164" nativesize="164" typeclass="Userdef" iecname="_eixo_drive">
+      <UserDefElement type="T_MC_ReadAxisError_PTO" iecname="falha" byteoffset="0" />
+      <UserDefElement type="T_MC_ReadActualPosition_PTO" iecname="posicao" byteoffset="16" />
+      <UserDefElement type="T_MC_Power_PTO" iecname="power" byteoffset="36" />
+      <UserDefElement type="T_MC_Reset_PTO" iecname="reset" byteoffset="60" />
+      <UserDefElement type="T_MC_ReadMotionState_PTO" iecname="state" byteoffset="76" />
+      <UserDefElement type="T_MC_ReadStatus_PTO" iecname="status" byteoffset="96" />
+      <UserDefElement type="T_MC_Stop_PTO" iecname="stop" byteoffset="120" />
+    </TypeUserDef>
+    <TypeUserDef name="T__eixo" size="1124" nativesize="1124" typeclass="Userdef" iecname="_eixo">
+      <UserDefElement type="T__eixo_auto" iecname="auto" byteoffset="0" />
+      <UserDefElement type="T__eixo_home" iecname="home" byteoffset="664" />
+      <UserDefElement type="T__eixo_drive" iecname="drive" byteoffset="944" />
+      <UserDefElement type="T_BOOL" iecname="falha" byteoffset="1108" />
+      <UserDefElement type="T_DINT" iecname="posicaoAtual" byteoffset="1112" />
+      <UserDefElement type="T_BOOL" iecname="calcula" byteoffset="1116" />
+      <UserDefElement type="T_BOOL" iecname="parando" byteoffset="1117" />
+      <UserDefElement type="T_BOOL" iecname="pausa" byteoffset="1118" />
+      <UserDefElement type="T_BOOL" iecname="constMove" byteoffset="1119" />
+      <UserDefElement type="T_BOOL" iecname="errorStop" byteoffset="1120" />
+    </TypeUserDef>
+    <TypeUserDef name="T_TON" size="28" nativesize="28" typeclass="Userdef" iecname="TON">
+      <UserDefElement type="T_BOOL" iecname="IN" byteoffset="4" />
+      <UserDefElement type="T_TIME" iecname="PT" byteoffset="8" />
+      <UserDefElement type="T_BOOL" iecname="Q" byteoffset="12" />
+      <UserDefElement type="T_TIME" iecname="ET" byteoffset="16" />
+    </TypeUserDef>
+    <TypeUserDef name="T__exec_bits" size="12" nativesize="12" typeclass="Userdef" iecname="_exec_bits">
+      <UserDefElement type="T_BOOL" iecname="RQ" byteoffset="0" />
+      <UserDefElement type="T_BOOL" iecname="IP" byteoffset="1" />
+      <UserDefElement type="T_BOOL" iecname="DN" byteoffset="2" />
+      <UserDefElement type="T_DINT" iecname="Fase" byteoffset="4" />
+      <UserDefElement type="T_DINT" iecname="Mask" byteoffset="8" />
+    </TypeUserDef>
+    <TypeUserDef name="T_LIN_TRAFO" size="36" nativesize="36" typeclass="Userdef" iecname="LIN_TRAFO">
+      <UserDefElement type="T_REAL" iecname="IN" byteoffset="4" />
+      <UserDefElement type="T_REAL" iecname="IN_MIN" byteoffset="8" />
+      <UserDefElement type="T_REAL" iecname="IN_MAX" byteoffset="12" />
+      <UserDefElement type="T_REAL" iecname="OUT_MIN" byteoffset="16" />
+      <UserDefElement type="T_REAL" iecname="OUT_MAX" byteoffset="20" />
+      <UserDefElement type="T_REAL" iecname="OUT" byteoffset="24" />
+      <UserDefElement type="T_BOOL" iecname="ERROR" byteoffset="28" />
+      <UserDefElement type="T_REAL" iecname="Diff" byteoffset="32" />
+    </TypeUserDef>
+    <TypeArray name="T_ARRAY__1__2__OF_LIN_TRAFO" size="72" nativesize="72" typeclass="Array" iecname="ARRAY [1..2] OF LIN_TRAFO" basetype="T_LIN_TRAFO">
+      <ArrayDim minrange="1" maxrange="2" />
+    </TypeArray>
+    <TypeSimple name="T_UINT" size="2" swapsize="2" typeclass="UInt" iecname="UINT" />
+    <TypeArray name="T_ARRAY__0__50__OF_BOOL" size="51" nativesize="51" typeclass="Array" iecname="ARRAY [0..50] OF BOOL" basetype="T_BOOL">
+      <ArrayDim minrange="0" maxrange="50" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__2__OF_INT" size="6" nativesize="6" typeclass="Array" iecname="ARRAY [0..2] OF INT" basetype="T_INT">
+      <ArrayDim minrange="0" maxrange="2" />
+    </TypeArray>
+    <TypeSimple name="T_WSTRING" size="162" swapsize="2" typeclass="WString" iecname="WSTRING" />
+  </TypeList>
+  <NodeList>
+    <Node name="Application">
+      <Node name="GVL">
+        <Node name="AjustaHora" type="T_BOOL" access="ReadWrite" />
+        <Node name="alarme" type="T_ARRAY__0__50__OF_BOOL" access="ReadWrite" />
+        <Node name="alarmeReset" type="T_BOOL" access="ReadWrite" />
+        <Node name="alarmeResetInd" type="T_BOOL" access="ReadWrite" />
+        <Node name="alarmes" type="T__exec_bits" access="ReadWrite" />
+        <Node name="alinhador" type="T__exec_bits" access="ReadWrite" />
+        <Node name="alwaysOff" type="T_BOOL" access="ReadWrite" />
+        <Node name="alwaysOn" type="T_BOOL" access="ReadWrite" />
+        <Node name="analogTorqueDrive" type="T_ARRAY__0__2__OF_INT" access="ReadWrite" />
+        <Node name="AnoAtual" type="T_UINT" access="ReadWrite" />
+        <Node name="AnoSet" type="T_UINT" access="ReadWrite" />
+        <Node name="ativoManual" type="T_BOOL" access="ReadWrite" />
+        <Node name="calcGeral" type="T_BOOL" access="ReadWrite" />
+        <Node name="calcTempos" type="T_BOOL" access="ReadWrite" />
+        <Node name="ciclo" type="T__exec_bits" access="ReadWrite" />
+        <Node name="cilNip" type="T__exec_bits" access="ReadWrite" />
+        <Node name="ClkScan" type="T_BOOL" access="ReadWrite" />
+        <Node name="comando" type="T__exec_bits" access="ReadWrite" />
+        <Node name="comandoOff" type="T_BOOL" access="ReadWrite" />
+        <Node name="contagem" type="T__exec_bits" access="ReadWrite" />
+        <Node name="cortinaOk" type="T_BOOL" access="ReadWrite" />
+        <Node name="desbobTorqueOper" type="T_ARRAY__0__2__OF_REAL" access="ReadWrite" />
+        <Node name="desliga" type="T__exec_bits" access="ReadWrite" />
+        <Node name="DiaAtual" type="T_UINT" access="ReadWrite" />
+        <Node name="DiaSet" type="T_UINT" access="ReadWrite" />
+        <Node name="emergOk" type="T_BOOL" access="ReadWrite" />
+        <Node name="enbNip" type="T__exec_bits" access="ReadWrite" />
+        <Node name="enbReb" type="T__exec_bits" access="ReadWrite" />
+        <Node name="existeAlarme" type="T_BOOL" access="ReadWrite" />
+        <Node name="firstScan" type="T_BOOL" access="ReadWrite" />
+        <Node name="HoraAtual" type="T_UINT" access="ReadWrite" />
+        <Node name="HoraSet" type="T_UINT" access="ReadWrite" />
+        <Node name="injecaoTpoOff" type="T_BOOL" access="ReadWrite" />
+        <Node name="jogAbilita" type="T_BOOL" access="ReadWrite" />
+        <Node name="jogCilindroNip" type="T_BOOL" access="ReadWrite" />
+        <Node name="jogDirecao" type="T_BOOL" access="ReadWrite" />
+        <Node name="jogEnebleGeral" type="T_BOOL" access="ReadWrite" />
+        <Node name="jogNeg" type="T__exec_bits" access="ReadWrite" />
+        <Node name="jogNip" type="T_BOOL" access="ReadWrite" />
+        <Node name="jogPos" type="T__exec_bits" access="ReadWrite" />
+        <Node name="jogRebDir" type="T_BOOL" access="ReadWrite" />
+        <Node name="jogRebEsq" type="T_BOOL" access="ReadWrite" />
+        <Node name="ladoDir" type="T_BOOL" access="ReadWrite" />
+        <Node name="ladoEsq" type="T_BOOL" access="ReadWrite" />
+        <Node name="liberaCiclo" type="T_BOOL" access="ReadWrite" />
+        <Node name="liga" type="T__exec_bits" access="ReadWrite" />
+        <Node name="ligaAlinhador" type="T_BOOL" access="ReadWrite" />
+        <Node name="ligaMaq" type="T_BOOL" access="ReadWrite" />
+        <Node name="livreComando" type="T_BOOL" access="ReadWrite" />
+        <Node name="livreStart" type="T_BOOL" access="ReadWrite" />
+        <Node name="manual" type="T_BOOL" access="ReadWrite" />
+        <Node name="mensagem" type="T_ARRAY__0__50__OF_BOOL" access="ReadWrite" />
+        <Node name="mesaCentro" type="T_BOOL" access="ReadWrite" />
+        <Node name="MesAtual" type="T_UINT" access="ReadWrite" />
+        <Node name="MesSet" type="T_UINT" access="ReadWrite" />
+        <Node name="MinutoAtual" type="T_UINT" access="ReadWrite" />
+        <Node name="MinutoSet" type="T_UINT" access="ReadWrite" />
+        <Node name="modoAutomatico" type="T_BOOL" access="ReadWrite" />
+        <Node name="nip" type="T__eixo" access="ReadWrite" />
+        <Node name="nipEmMove" type="T_BOOL" access="ReadWrite" />
+        <Node name="nipMove" type="T__exec_bits" access="ReadWrite" />
+        <Node name="nipParada" type="T__exec_bits" access="ReadWrite" />
+        <Node name="nipPausado" type="T_BOOL" access="ReadWrite" />
+        <Node name="nipStop" type="T__exec_bits" access="ReadWrite" />
+        <Node name="numAlarme" type="T_SINT" access="ReadWrite" />
+        <Node name="partidaLenta" type="T_BOOL" access="ReadWrite" />
+        <Node name="partidaOK" type="T_BOOL" access="ReadWrite" />
+        <Node name="pisca" type="T_BOOL" access="ReadWrite" />
+        <Node name="piscaRapido" type="T_BOOL" access="ReadWrite" />
+        <Node name="porcRebobinador" type="T_ARRAY__1__2__OF_REAL" access="ReadWrite" />
+        <Node name="primeiroCiclo" type="T_BOOL" access="ReadWrite" />
+        <Node name="principal" type="T__exec_bits" access="ReadWrite" />
+        <Node name="psBtCiclo" type="T_BOOL" access="ReadWrite" />
+        <Node name="rebobiPorc" type="T_ARRAY__1__2__OF_LIN_TRAFO" access="ReadWrite" />
+        <Node name="rebobTorqueOper" type="T_ARRAY__0__2__OF_REAL" access="ReadWrite" />
+        <Node name="revisora" type="T__eixo" access="ReadWrite" />
+        <Node name="SegundoAtual" type="T_UINT" access="ReadWrite" />
+        <Node name="SegundoSet" type="T_UINT" access="ReadWrite" />
+        <Node name="sentidoDesbobinar" type="T_BOOL" access="ReadWrite" />
+        <Node name="sentidoRebobinar" type="T_BOOL" access="ReadWrite" />
+        <Node name="sink" type="T_BOOL" access="ReadWrite" />
+        <Node name="start" type="T_BOOL" access="ReadWrite" />
+        <Node name="T_nipLiga" type="T_TON" access="ReadWrite" />
+        <Node name="tempoAtrasoAposDesligar" type="T_BOOL" access="ReadWrite" />
+        <Node name="TL_inicializa" type="T_TON" access="ReadWrite" />
+        <Node name="torqueParada" type="T_BOOL" access="ReadWrite" />
+        <Node name="tpoArAtivo" type="T_TIME" access="ReadWrite" />
+        <Node name="tpoInicio" type="T_TIME" access="ReadWrite" />
+        <Node name="triggerBobina" type="T_BOOL" access="ReadWrite" />
+        <Node name="triggerValorDesbReb" type="T_BOOL" access="ReadWrite" />
+        <Node name="troggerTest" type="T_BOOL" access="ReadWrite" />
+        <Node name="valorPorcRebobinador" type="T_ARRAY__1__2__OF_REAL" access="ReadWrite" />
+        <Node name="velocPartida" type="T_BOOL" access="ReadWrite" />
+      </Node>
+      <Node name="IHM">
+        <Node name="ihm_alarme" type="T_ARRAY__0__50__OF_BOOL" access="ReadWrite" />
+        <Node name="ihm_alarmeReset" type="T_BOOL" access="ReadWrite" />
+        <Node name="ihm_alarmeResetInd" type="T_BOOL" access="ReadWrite" />
+        <Node name="ihm_alinhador" type="T_BOOL" access="ReadWrite" />
+        <Node name="ihm_bannerConfirma" type="T_BOOL" access="ReadWrite" />
+        <Node name="ihm_bannerMensagem" type="T_BOOL" access="ReadWrite" />
+        <Node name="ihm_cilindroNip" type="T_BOOL" access="ReadWrite" />
+        <Node name="ihm_confirmaV" type="T_BOOL" access="ReadWrite" />
+        <Node name="ihm_confirmaX" type="T_BOOL" access="ReadWrite" />
+        <Node name="ihm_desbobDec" type="T_BOOL" access="ReadWrite" />
+        <Node name="ihm_desbobInc" type="T_BOOL" access="ReadWrite" />
+        <Node name="ihm_inverte" type="T_BOOL" access="ReadWrite" />
+        <Node name="ihm_mensagem" type="T_DINT" access="ReadWrite" />
+        <Node name="ihm_numReceita" type="T_SINT" access="ReadWrite" />
+        <Node name="ihm_rebobDec" type="T_BOOL" access="Write" />
+        <Node name="ihm_rebobInc" type="T_BOOL" access="ReadWrite" />
+        <Node name="ihm_telaAtual" type="T_INT" access="ReadWrite" />
+        <Node name="ihm_telaHome" type="T_BOOL" access="ReadWrite" />
+        <Node name="ihm_textoConfirma" type="T_DINT" access="ReadWrite" />
+        <Node name="ihm_textoProced" type="T_DINT" access="ReadWrite" />
+        <Node name="ihm_valorDesb" type="T_ARRAY__0__2__OF_REAL" access="ReadWrite" />
+        <Node name="ihm_valorReb" type="T_ARRAY__0__2__OF_REAL" access="ReadWrite" />
+        <Node name="ihm_velocMedida" type="T_DINT" access="ReadWrite" />
+        <Node name="nome" type="T_WSTRING" access="ReadWrite" />
+      </Node>
+      <Node name="PERSISTENTVARS">
+        <Node name="auxVeloc" type="T_ARRAY__0__4__OF_BOOL" access="ReadWrite" />
+        <Node name="bobina" type="T_ARRAY__0__5__OF__receita" access="ReadWrite" />
+        <Node name="bobinaAtual" type="T__receita" access="ReadWrite" />
+        <Node name="delayTorq" type="T_ARRAY__0__1__OF_TIME" access="ReadWrite" />
+        <Node name="displayState" type="T_INT" access="ReadWrite" />
+        <Node name="ihm_btUltraSomHab" type="T_BOOL" access="ReadWrite" />
+        <Node name="ihm_tempoInicio" type="T_DINT" access="ReadWrite" />
+        <Node name="ihm_velocidade" type="T_DINT" access="ReadWrite" />
+        <Node name="jogVelocNip" type="T_DINT" access="ReadWrite" />
+        <Node name="M_desbobTorqueMax" type="T_ARRAY__0__2__OF_REAL" access="ReadWrite" />
+        <Node name="M_desbobTorqueMin" type="T_ARRAY__0__2__OF_REAL" access="ReadWrite" />
+        <Node name="M_desbobTorqueOper" type="T_ARRAY__0__2__OF_REAL" access="ReadWrite" />
+        <Node name="M_diamRolo" type="T_DINT" access="ReadWrite" />
+        <Node name="M_pulsosParar" type="T_DINT" access="ReadWrite" />
+        <Node name="M_rebobTorqueMax" type="T_ARRAY__0__2__OF_REAL" access="ReadWrite" />
+        <Node name="M_rebobTorqueMin" type="T_ARRAY__0__2__OF_REAL" access="ReadWrite" />
+        <Node name="M_rebobTorqueOper" type="T_ARRAY__0__2__OF_REAL" access="ReadWrite" />
+        <Node name="M_revisoraAcel" type="T_DINT" access="ReadWrite" />
+        <Node name="M_revisoraDecel" type="T_DINT" access="ReadWrite" />
+        <Node name="M_revisoraVeloc" type="T_DINT" access="ReadWrite" />
+        <Node name="numRec" type="T_SINT" access="ReadWrite" />
+        <Node name="paramFab" type="T_BOOL" access="ReadWrite" />
+        <Node name="parseAnalog" type="T_ARRAY__0__1__OF_INT" access="ReadWrite" />
+        <Node name="pi" type="T_REAL" access="ReadWrite" />
+        <Node name="revisoraVelocNip" type="T_DINT" access="ReadWrite" />
+        <Node name="saidaReb" type="T_ARRAY__0__1__OF_BOOL" access="ReadWrite" />
+        <Node name="sentido" type="T_INT" access="ReadWrite" />
+        <Node name="valorDesbobTorqueMax" type="T_REAL" access="ReadWrite" />
+        <Node name="valorDesbobTorqueMin" type="T_REAL" access="ReadWrite" />
+        <Node name="valorJogRebob01" type="T_INT" access="ReadWrite" />
+        <Node name="valorJogRebob02" type="T_INT" access="ReadWrite" />
+        <Node name="valorRebobTorqueMax" type="T_REAL" access="ReadWrite" />
+        <Node name="valorRebobTorqueMin" type="T_REAL" access="ReadWrite" />
+        <Node name="veloc" type="T_ARRAY__0__4__OF_DINT" access="ReadWrite" />
+        <Node name="versaoSoftware" type="T_REAL" access="ReadWrite" />
+        <Node name="visLadoDir" type="T_BOOL" access="ReadWrite" />
+        <Node name="visLadoEsq" type="T_BOOL" access="ReadWrite" />
+      </Node>
+    </Node>
+  </NodeList>
+</Symbolconfiguration>
